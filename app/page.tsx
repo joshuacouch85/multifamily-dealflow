@@ -140,7 +140,7 @@ export default function Home() {
 
         <div style={{ textAlign: "center" }}>
           <Image
-            src="/report-example.jpg"
+            src="/report-example.png"
             width={900}
             height={600}
             alt="Example feasibility report"
