@@ -2,21 +2,46 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main style={{ maxWidth: 1100, margin: "0 auto", padding: "40px" }}>
-      
-      {/* HERO SECTION */}
-      <section style={{ textAlign: "center", padding: "60px 0" }}>
-        <h1 style={{ fontSize: 48, marginBottom: 20 }}>
+    <main
+      style={{
+        maxWidth: 1100,
+        margin: "0 auto",
+        padding: "24px 16px",
+      }}
+    >
+      <section style={{ textAlign: "center", padding: "40px 0" }}>
+        <h1
+          style={{
+            fontSize: "clamp(32px, 6vw, 48px)",
+            marginBottom: 20,
+            lineHeight: 1.1,
+          }}
+        >
           Pre-Screened Multifamily Land Deals
         </h1>
 
-        <p style={{ fontSize: 20, maxWidth: 700, margin: "0 auto 40px auto" }}>
+        <p
+          style={{
+            fontSize: "clamp(16px, 3vw, 20px)",
+            maxWidth: 700,
+            margin: "0 auto 32px auto",
+            lineHeight: 1.6,
+          }}
+        >
           We scan listed and off-market land parcels and deliver ranked
           multifamily development opportunities with estimated unit yield,
           land cost per door, and major risk flags.
         </p>
 
-        <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 12,
+            flexWrap: "wrap",
+            marginBottom: 32,
+          }}
+        >
           <a
             href="/demo"
             style={{
@@ -25,6 +50,7 @@ export default function Home() {
               borderRadius: 10,
               textDecoration: "none",
               fontWeight: 600,
+              color: "#111",
             }}
           >
             Request Demo
@@ -38,24 +64,28 @@ export default function Home() {
               borderRadius: 10,
               textDecoration: "none",
               fontWeight: 600,
+              color: "#111",
             }}
           >
             Order Site Screen
           </a>
         </div>
 
-        <div style={{ marginTop: 40 }}>
+        <div style={{ marginTop: 20 }}>
           <Image
             src="/multifamily-site.jpg"
             width={1000}
             height={500}
             alt="Multifamily development site"
-            style={{ borderRadius: 12 }}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 12,
+            }}
           />
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
       <section style={{ marginTop: 60 }}>
         <h2 style={{ textAlign: "center", marginBottom: 30 }}>
           What Developers Receive
@@ -90,13 +120,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REPORT SECTION */}
       <section style={{ marginTop: 80 }}>
         <h2 style={{ textAlign: "center", marginBottom: 30 }}>
-          Example Developer Report
+          Developer Screening Report
         </h2>
 
-        <p style={{ textAlign: "center", maxWidth: 700, margin: "0 auto 30px auto" }}>
+        <p
+          style={{
+            textAlign: "center",
+            maxWidth: 700,
+            margin: "0 auto 30px auto",
+            lineHeight: 1.6,
+          }}
+        >
           Each screening includes estimated unit yield, land cost per door,
           and major development risk flags so you can quickly decide whether
           a site is worth pursuing.
@@ -104,17 +140,52 @@ export default function Home() {
 
         <div style={{ textAlign: "center" }}>
           <Image
-            src="/report-example.png"
+            src="/report-example.jpg"
             width={900}
             height={600}
             alt="Example feasibility report"
-            style={{ borderRadius: 12 }}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 12,
+            }}
           />
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section style={{ marginTop: 80, textAlign: "center" }}>
+      <section style={{ marginTop: 80 }}>
+        <h2>Built by Multifamily Developers</h2>
+
+        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
+          Dealflow AI was created by operators actively evaluating multifamily
+          development sites across Arkansas and Oklahoma. The goal is simple:
+          quickly identify viable sites and eliminate bad dirt before spending
+          time and capital on full diligence.
+        </p>
+
+        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
+          Our screening reports are designed to mirror the early-stage
+          feasibility analysis developers perform when underwriting land
+          acquisitions.
+        </p>
+      </section>
+
+      <section style={{ marginTop: 60 }}>
+        <h2>Focused on Midwest Multifamily Markets</h2>
+
+        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
+          Our initial coverage focuses on Arkansas, Oklahoma, and surrounding
+          Midwest markets where multifamily development opportunities remain
+          strong and land pricing is still attainable.
+        </p>
+
+        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
+          Over time the platform will expand to support developers searching
+          for multifamily land across the lower 48.
+        </p>
+      </section>
+
+      <section style={{ marginTop: 80, textAlign: "center", paddingBottom: 40 }}>
         <h2>Start Screening Land Deals Today</h2>
 
         <p style={{ marginBottom: 20 }}>
@@ -129,12 +200,12 @@ export default function Home() {
             borderRadius: 10,
             textDecoration: "none",
             fontWeight: 600,
+            color: "#111",
           }}
         >
           Order a Site Screen
         </a>
       </section>
-
     </main>
   );
 }
