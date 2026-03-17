@@ -184,7 +184,37 @@ export default function Home() {
           for multifamily land across the lower 48.
         </p>
       </section>
+<section style={{ marginTop: 80 }}>
+  <h2 style={{ textAlign: "center", marginBottom: 30 }}>
+    Parcel Overview
+  </h2>
 
+  <p
+    style={{
+      textAlign: "center",
+      maxWidth: 700,
+      margin: "0 auto 30px auto",
+      lineHeight: 1.6,
+    }}
+  >
+    Evaluate sites faster with parcel-level screening, aerial context,
+    and early-stage multifamily feasibility analysis.
+  </p>
+
+  <div style={{ textAlign: "center" }}>
+    <Image
+      src="/parcel-map.jpg"
+      width={900}
+      height={600}
+      alt="Parcel map preview"
+      style={{
+        width: "100%",
+        height: "auto",
+        borderRadius: 12,
+      }}
+    />
+  </div>
+</section>
       <section style={{ marginTop: 80, textAlign: "center", paddingBottom: 40 }}>
         <h2>Start Screening Land Deals Today</h2>
 
