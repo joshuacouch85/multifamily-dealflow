@@ -124,7 +124,62 @@ export default function Home() {
         <h2 style={{ textAlign: "center", marginBottom: 30 }}>
           Developer Screening Report
         </h2>
+<div
+  style={{
+    maxWidth: 900,
+    margin: "0 auto 30px auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: 20,
+  }}
+>
+  <div
+    style={{
+      border: "1px solid #ddd",
+      borderRadius: 12,
+      padding: 24,
+      textAlign: "center",
+    }}
+  >
+    <p style={{ margin: 0, fontSize: 14, textTransform: "uppercase", letterSpacing: 1 }}>
+      Deal Score
+    </p>
+    <p style={{ fontSize: 40, fontWeight: 700, margin: "10px 0" }}>7.4 / 10</p>
+    <p style={{ margin: 0 }}>Strong enough for real diligence</p>
+  </div>
 
+  <div
+    style={{
+      border: "1px solid #ddd",
+      borderRadius: 12,
+      padding: 24,
+      textAlign: "center",
+    }}
+  >
+    <p style={{ margin: 0, fontSize: 14, textTransform: "uppercase", letterSpacing: 1 }}>
+      Recommendation
+    </p>
+    <p style={{ fontSize: 26, fontWeight: 700, margin: "10px 0" }}>
+      Pursue with Caution
+    </p>
+    <p style={{ margin: 0 }}>Verify utilities and grading before acquisition</p>
+  </div>
+
+  <div
+    style={{
+      border: "1px solid #ddd",
+      borderRadius: 12,
+      padding: 24,
+      textAlign: "center",
+    }}
+  >
+    <p style={{ margin: 0, fontSize: 14, textTransform: "uppercase", letterSpacing: 1 }}>
+      Estimated Yield
+    </p>
+    <p style={{ fontSize: 40, fontWeight: 700, margin: "10px 0" }}>136</p>
+    <p style={{ margin: 0 }}>Projected multifamily units</p>
+  </div>
+</div>
         <p
           style={{
             textAlign: "center",
