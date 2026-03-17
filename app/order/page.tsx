@@ -1,3 +1,6 @@
+
+"use client";
+
 export default function OrderPage() {
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 60px" }}>
@@ -20,16 +23,33 @@ export default function OrderPage() {
       </section>
 
       <form
-        action="https://formsubmit.co/joshua.couch85@gmail.com"
-        method="POST"
+        onSubmit={async (e) => {
+          e.preventDefault();
+
+          const form = e.currentTarget;
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          const response = await fetch("/api/submit", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+
+          if (response.ok) {
+            alert("Submission received. We will review your site shortly.");
+            form.reset();
+          } else {
+            alert("There was a problem submitting the form.");
+          }
+        }}
         style={{
           display: "grid",
           gap: 20,
         }}
       >
-        <input type="hidden" name="_subject" value="New Parcel Screening Submission" />
-        <input type="hidden" name="_captcha" value="false" />
-
         <section
           style={{
             border: "1px solid #ddd",
@@ -204,8 +224,8 @@ export default function OrderPage() {
               </label>
               <select
                 name="target_product"
-                style={{ width: "100%", padding: 12, fontSize: 16 }}
                 defaultValue=""
+                style={{ width: "100%", padding: 12, fontSize: 16 }}
               >
                 <option value="" disabled>
                   Select one
@@ -240,7 +260,7 @@ export default function OrderPage() {
               <label style={{ display: "block", marginBottom: 8, fontWeight: 600 }}>
                 Water
               </label>
-              <select name="water" style={{ width: "100%", padding: 12, fontSize: 16 }} defaultValue="">
+              <select name="water" defaultValue="" style={{ width: "100%", padding: 12, fontSize: 16 }}>
                 <option value="" disabled>
                   Select one
                 </option>
@@ -255,7 +275,7 @@ export default function OrderPage() {
               <label style={{ display: "block", marginBottom: 8, fontWeight: 600 }}>
                 Sewer
               </label>
-              <select name="sewer" style={{ width: "100%", padding: 12, fontSize: 16 }} defaultValue="">
+              <select name="sewer" defaultValue="" style={{ width: "100%", padding: 12, fontSize: 16 }}>
                 <option value="" disabled>
                   Select one
                 </option>
@@ -270,7 +290,7 @@ export default function OrderPage() {
               <label style={{ display: "block", marginBottom: 8, fontWeight: 600 }}>
                 Electric
               </label>
-              <select name="electric" style={{ width: "100%", padding: 12, fontSize: 16 }} defaultValue="">
+              <select name="electric" defaultValue="" style={{ width: "100%", padding: 12, fontSize: 16 }}>
                 <option value="" disabled>
                   Select one
                 </option>
@@ -285,7 +305,7 @@ export default function OrderPage() {
               <label style={{ display: "block", marginBottom: 8, fontWeight: 600 }}>
                 Gas
               </label>
-              <select name="gas" style={{ width: "100%", padding: 12, fontSize: 16 }} defaultValue="">
+              <select name="gas" defaultValue="" style={{ width: "100%", padding: 12, fontSize: 16 }}>
                 <option value="" disabled>
                   Select one
                 </option>
@@ -308,24 +328,6 @@ export default function OrderPage() {
               style={{ width: "100%", padding: 12, fontSize: 16 }}
             />
           </div>
-        </section>
-
-        <section
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: 12,
-            padding: 24,
-          }}
-        >
-          <h2 style={{ marginTop: 0, marginBottom: 12 }}>Screening Options</h2>
-          <p style={{ marginTop: 0, lineHeight: 1.7 }}>
-            <strong>Instant Screen:</strong> $149 — High-level parcel review with
-            yield estimate, risk flags, and pursue / caution / pass guidance.
-          </p>
-          <p style={{ lineHeight: 1.7 }}>
-            <strong>Developer Report:</strong> $399 — Expanded screening with
-            scenario analysis, rough development framework, and diligence guidance.
-          </p>
         </section>
 
         <button
