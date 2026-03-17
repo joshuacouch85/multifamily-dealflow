@@ -153,37 +153,64 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ marginTop: 80 }}>
-        <h2>Built by Multifamily Developers</h2>
+<section style={{ marginTop: 80 }}>
+  <h2 style={{ fontSize: "clamp(24px, 4vw, 32px)", marginBottom: 16 }}>
+    Built by Multifamily Developers
+  </h2>
 
-        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-          Dealflow AI was created by operators actively evaluating multifamily
-          development sites across Arkansas and Oklahoma. The goal is simple:
-          quickly identify viable sites and eliminate bad dirt before spending
-          time and capital on full diligence.
-        </p>
+  <p
+    style={{
+      maxWidth: 800,
+      fontSize: "clamp(16px, 2.5vw, 18px)",
+      lineHeight: 1.7,
+      marginBottom: 16,
+    }}
+  >
+    <strong>Dealflow AI was built by operators actively evaluating multifamily
+    development sites</strong> in Arkansas, Oklahoma, and surrounding Midwest markets.
+    The purpose is simple: identify viable sites faster, eliminate bad dirt early,
+    and focus time on deals that warrant real diligence.
+  </p>
 
-        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-          Our screening reports are designed to mirror the early-stage
-          feasibility analysis developers perform when underwriting land
-          acquisitions.
-        </p>
-      </section>
+  <p
+    style={{
+      maxWidth: 800,
+      fontSize: "clamp(16px, 2.5vw, 18px)",
+      lineHeight: 1.7,
+    }}
+  >
+    <strong>Our screening reports mirror real-world early-stage underwriting</strong>
+    performed by developers before engaging full civil, architectural, and financial teams.
+  </p>
+</section>
+<section style={{ marginTop: 60 }}>
+  <h2 style={{ fontSize: "clamp(24px, 4vw, 32px)", marginBottom: 16 }}>
+    Focused on Midwest Multifamily Markets
+  </h2>
 
-      <section style={{ marginTop: 60 }}>
-        <h2>Focused on Midwest Multifamily Markets</h2>
+  <p
+    style={{
+      maxWidth: 800,
+      fontSize: "clamp(16px, 2.5vw, 18px)",
+      lineHeight: 1.7,
+      marginBottom: 16,
+    }}
+  >
+    <strong>Initial coverage focuses on Arkansas, Oklahoma, and surrounding Midwest markets</strong>
+    where multifamily development opportunities remain strong and land pricing is still attainable.
+  </p>
 
-        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-          Our initial coverage focuses on Arkansas, Oklahoma, and surrounding
-          Midwest markets where multifamily development opportunities remain
-          strong and land pricing is still attainable.
-        </p>
-
-        <p style={{ maxWidth: 700, lineHeight: 1.7 }}>
-          Over time the platform will expand to support developers searching
-          for multifamily land across the lower 48.
-        </p>
-      </section>
+  <p
+    style={{
+      maxWidth: 800,
+      fontSize: "clamp(16px, 2.5vw, 18px)",
+      lineHeight: 1.7,
+    }}
+  >
+    The platform is designed to expand into a nationwide land screening tool
+    supporting developers across the entire lower 48.
+  </p>
+</section>
 <section style={{ marginTop: 80 }}>
   <h2 style={{ textAlign: "center", marginBottom: 30 }}>
     Parcel Overview
